@@ -23,6 +23,7 @@ namespace SimpleApi.Controllers
         {
             try
             {
+                
                 var httpClient = _httpClientFactory.CreateClient();
                 var response = await httpClient.GetAsync("https://ddragon.leagueoflegends.com/cdn/11.15.1/data/en_US/champion.json");
 
@@ -32,13 +33,21 @@ namespace SimpleApi.Controllers
                 }
 
                 var championsData = await response.Content.ReadFromJsonAsync<ChampionsResponse>();
-
                 if (championsData == null || championsData.Data == null)
                 {
                     return BadRequest("Invalid champions data received from Riot API.");
                 }
 
-                var champions = championsData.Data.Values.ToList();
+                var champions = championsData.Data.Values.Select(championDetails => new Champion
+                {
+                    Id = championDetails.Id,
+                    Name = championDetails.Name,
+                    Title = championDetails.Title,
+                    Blurb = championDetails.Blurb,
+                    ImageUrl = $"https://ddragon.leagueoflegends.com/cdn/11.15.1/img/champion/{championDetails.Image.Full}" // Adjust the URL as per Riot Games API structure
+                }).ToList();
+
+                HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:3000");
                 return Ok(champions);
             }
             catch (Exception ex)
@@ -46,6 +55,7 @@ namespace SimpleApi.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
     }
 
     public class ChampionsResponse
@@ -59,8 +69,9 @@ namespace SimpleApi.Controllers
         public string Name { get; set; }
         public string Title { get; set; }
         public string Blurb { get; set; }
-        public ChampionImage Image { get; set; }
+        public ChampionImage Image { get; set; } // Nested class for image details
     }
+
 
     public class Champion
     {
@@ -68,8 +79,9 @@ namespace SimpleApi.Controllers
         public string Name { get; set; }
         public string Title { get; set; }
         public string Blurb { get; set; }
-        public ChampionImage Image { get; set; } // Use a nested class for Image property
+        public string ImageUrl { get; set; } // Property for storing image URL
     }
+
 
     public class ChampionImage
     {

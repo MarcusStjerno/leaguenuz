@@ -1,0 +1,22 @@
+.champion-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Creates 6 columns */
+    gap: 10px; /* Adjust the space between images */
+    padding: 20px;
+}
+
+.champion-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd; /* Optional border for cards */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.champion-image {
+    width: 100%; /* Ensure the image fills the card */
+    height: auto;
+    max-width: 100px; /* Set a max width to control image size */
+}
