@@ -8,7 +8,7 @@ using System.Net.Http.Json; // Add this namespace for ReadFromJsonAsync extensio
 namespace SimpleApi.Controllers
 {
     [ApiController]
-    [Route("chhamps")]
+    [Route("champs")]
     public class ChampionsController : ControllerBase
     {
         private readonly IHttpClientFactory _httpClientFactory;
@@ -41,6 +41,7 @@ namespace SimpleApi.Controllers
                 var champions = championsData.Data.Values.Select(championDetails => new Champion
                 {
                     Id = championDetails.Id,
+                    key = championDetails.Key,
                     Name = championDetails.Name,
                     Title = championDetails.Title,
                     Blurb = championDetails.Blurb,
@@ -66,6 +67,7 @@ namespace SimpleApi.Controllers
     public class ChampionDetails
     {
         public string Id { get; set; }
+        public string Key { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
         public string Blurb { get; set; }
@@ -76,6 +78,7 @@ namespace SimpleApi.Controllers
     public class Champion
     {
         public string Id { get; set; }
+        public string key { get; set; }
         public string Name { get; set; }
         public string Title { get; set; }
         public string Blurb { get; set; }
