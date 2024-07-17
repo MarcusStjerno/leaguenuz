@@ -137,3 +137,6 @@ a:\Code\League-of-Legends-Nuzlocke\server\nuzlocke_server\obj\Debug\net7.0\refin
 a:\Code\League-of-Legends-Nuzlocke\server\nuzlocke_server\obj\Debug\net7.0\nuzlocke_server.pdb
 a:\Code\League-of-Legends-Nuzlocke\server\nuzlocke_server\obj\Debug\net7.0\nuzlocke_server.genruntimeconfig.cache
 a:\Code\League-of-Legends-Nuzlocke\server\nuzlocke_server\obj\Debug\net7.0\ref\nuzlocke_server.dll
+C:\Users\tino7\Documents\GitHub\leaguenuz\server\nuzlocke_server\obj\Debug\net7.0\nuzlocke_server.dll
+C:\Users\tino7\Documents\GitHub\leaguenuz\server\nuzlocke_server\obj\Debug\net7.0\refint\nuzlocke_server.dll
+C:\Users\tino7\Documents\GitHub\leaguenuz\server\nuzlocke_server\obj\Debug\net7.0\nuzlocke_server.pdb

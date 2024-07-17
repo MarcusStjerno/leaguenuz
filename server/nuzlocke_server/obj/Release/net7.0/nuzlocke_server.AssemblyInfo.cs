@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("nuzlocke_server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e7c7bd912fa24954555aa4a276799c4759e275f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("nuzlocke_server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("nuzlocke_server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
