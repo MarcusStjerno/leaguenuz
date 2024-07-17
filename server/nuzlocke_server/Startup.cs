@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Service;
 
 public class Startup
 {
@@ -29,7 +30,7 @@ public class Startup
                 });
         });
         services.AddControllers();
-        services.AddHttpClient<RiotGamesService>();
+        services.AddScoped<IRiotGamesService, RiotGamesService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

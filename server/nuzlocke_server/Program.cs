@@ -25,18 +25,7 @@ public class Program
         // Make API call during startup
         var httpClientFactory = app.Services.GetRequiredService<IHttpClientFactory>();
         var httpClient = httpClientFactory.CreateClient();
-        var riotApiKey = app.Configuration["RGAPI-6326c744-4ee9-4cc3-91bf-9676cbc3101d"];
-        
-        try
-        {
-            var response = await httpClient.GetAsync($"https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/lulufizz/euw?api_key=RGAPI-cb139c63-5909-4352-834c-f6e6cc84db03");
-            var content = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(content);
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error fetching summoner info during startup: {ex.Message}");
-        }
+
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())

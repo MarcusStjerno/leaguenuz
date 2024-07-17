@@ -1385,19 +1385,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Marcus\\.nuget\\packages\\": {}
+    "C:\\Users\\tino7\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Code\\leaguenuz\\server\\nuzlocke_server\\nuzlocke_server.csproj",
+      "projectUniqueName": "C:\\Users\\tino7\\Documents\\GitHub\\leaguenuz\\server\\nuzlocke_server\\nuzlocke_server.csproj",
       "projectName": "nuzlocke_server",
-      "projectPath": "A:\\Code\\leaguenuz\\server\\nuzlocke_server\\nuzlocke_server.csproj",
-      "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-      "outputPath": "A:\\Code\\leaguenuz\\server\\nuzlocke_server\\obj\\",
+      "projectPath": "C:\\Users\\tino7\\Documents\\GitHub\\leaguenuz\\server\\nuzlocke_server\\nuzlocke_server.csproj",
+      "packagesPath": "C:\\Users\\tino7\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tino7\\Documents\\GitHub\\leaguenuz\\server\\nuzlocke_server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Marcus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tino7\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1417,11 +1417,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1472,7 +1467,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,28 +1,53 @@
+using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
+using System.Net.Http.Json; // Add this namespace
 
-public class RiotGamesService
+namespace Service
 {
-    private readonly HttpClient _httpClient;
-
-    public RiotGamesService(HttpClient httpClient)
+    public class RiotGamesService : IRiotGamesService
     {
-        _httpClient = httpClient;
+        private readonly HttpClient _httpClient;
+
+        public RiotGamesService(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+
+        public async Task<IList<Champion>> GetChampionsAsync()
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync("https://ddragon.leagueoflegends.com/cdn/11.15.1/data/en_US/champion.json");
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception($"Error fetching champions: {response.ReasonPhrase}");
+                }
+
+                var championsData = await response.Content.ReadFromJsonAsync<ChampionsResponse>();
+                return new List<Champion>(championsData.Data.Values);
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions as needed
+                throw new Exception("Error fetching champions.", ex);
+            }
+        }
     }
 
-    public async Task<IEnumerable<Champion>> GetChampionsAsync()
+    public class ChampionsResponse
     {
-        var response = await _httpClient.GetStringAsync("https://ddragon.leagueoflegends.com/cdn/11.15.1/data/en_US/champion.json");
-        var championsData = JObject.Parse(response)["data"].Values<JObject>();
+        public Dictionary<string, Champion> Data { get; set; }
+    }
 
-        return championsData.Select(champion => new Champion
-        {
-            Id = champion["id"].ToString(),
-            Name = champion["name"].ToString(),
-            Title = champion["title"].ToString(),
-            Blurb = champion["blurb"].ToString(),
-            Image = $"http://ddragon.leagueoflegends.com/cdn/11.15.1/img/champion/{champion["image"]["full"]}"
-        });
+    public class Champion
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Title { get; set; }
+        public string Blurb { get; set; }
+        public string Image { get; set; }
     }
 }

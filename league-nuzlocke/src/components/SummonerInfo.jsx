@@ -9,7 +9,7 @@ const SummonerInfo = () => {
 
   const fetchSummonerInfo = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/summoner/${name}/${tag}`);
+      const response = await axios.get(`http://localhost:5122/api/summoner/${name}/${tag}`);
       setSummonerInfo(response.data);
       setError(null);
     } catch (err) {
