@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{449F059F-246B-42CA-A185-DBFAEE22C11A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nuzlocke_server", "server\nuzlocke_server\nuzlocke_server.csproj", "{AD459BBE-BC30-4C0B-903E-4EF8EA0DFE89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD459BBE-BC30-4C0B-903E-4EF8EA0DFE89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD459BBE-BC30-4C0B-903E-4EF8EA0DFE89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD459BBE-BC30-4C0B-903E-4EF8EA0DFE89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD459BBE-BC30-4C0B-903E-4EF8EA0DFE89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD459BBE-BC30-4C0B-903E-4EF8EA0DFE89} = {449F059F-246B-42CA-A185-DBFAEE22C11A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD9D45DC-6E5B-4D91-A320-9BAC61923699}
+	EndGlobalSection
+EndGlobal

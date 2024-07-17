@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\league-nuzlocke",
+    "\\league-nuzlocke\\src",
+    "\\league-nuzlocke\\src\\dataaccess",
+    "\\server",
+    "\\server\\nuzlocke_server",
+    "\\server\\nuzlocke_server\\Controllers"
+  ],
+  "SelectedNode": "\\server\\nuzlocke_server\\Controllers\\WeatherForecastController.cs",
+  "PreviewInSolutionExplorer": false
+}

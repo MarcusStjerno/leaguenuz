@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6yCr1Czya3oJYM7ezP9dDtsSW1t0ZjgG/9xuxx0oQSw=",
+  "Source": "nuzlocke_server",
+  "BasePath": "_content/nuzlocke_server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
