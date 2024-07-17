@@ -7,7 +7,7 @@ const ChampionsList = () => {
     useEffect(() => {
         const fetchChampions = async () => {
             try {
-                const response = await axios.get('http://localhost:5122/api/champions');
+                const response = await axios.get('http://localhost:5000/api/champs');
                 setChampions(response.data);
             } catch (error) {
                 console.error("Error fetching the champions:", error);

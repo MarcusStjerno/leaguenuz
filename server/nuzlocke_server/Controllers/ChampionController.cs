@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-[Route("api/champs/")]
+[Route("api/champs")]
 [ApiController]
 public class ChampionsController : ControllerBase
 {
@@ -13,10 +13,19 @@ public class ChampionsController : ControllerBase
         _riotGamesService = riotGamesService;
     }
 
-    [HttpGet("champion")]
-    public async Task<IEnumerable<Champion>> Get()
+    [HttpGet]
+    public async Task<IActionResult> GetChampions()
     {
-        HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:3000");
-        return await _riotGamesService.GetChampionsAsync();
+        try
+        {
+            var champions = await _riotGamesService.GetChampionsAsync();
+            HttpContext.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:3000");
+            return Ok(champions);
+        }
+        catch (Exception ex)
+        {
+            // Handle exceptions appropriately
+            return StatusCode(500, "An error occurred while fetching champions.");
+        }
     }
 }

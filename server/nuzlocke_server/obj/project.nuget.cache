@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jd9l9f9XJJ4hA6bYR2++vqL9cWisl7OTsxdWctRhqxBbeyTd4WmA5QQ5ws3FMNuxf3AXFdITAFRvaTVJiVFRAQ==",
+  "dgSpecHash": "jyXDZ3TNOf1Uuz9pMYP6csgf30WTXZ3zTVMpSQRm4RDuBHEQbP3dyZuexjlX/PO7hPnzmr8ariyYZDDcfBtIGA==",
   "success": true,
-  "projectFilePath": "a:\\Code\\League-of-Legends-Nuzlocke\\server\\nuzlocke_server\\nuzlocke_server.csproj",
+  "projectFilePath": "A:\\Code\\leaguenuz\\server\\nuzlocke_server\\nuzlocke_server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

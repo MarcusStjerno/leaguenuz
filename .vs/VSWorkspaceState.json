@@ -8,6 +8,6 @@
     "\\server\\nuzlocke_server",
     "\\server\\nuzlocke_server\\Controllers"
   ],
-  "SelectedNode": "\\server\\nuzlocke_server\\Controllers\\WeatherForecastController.cs",
+  "SelectedNode": "\\server\\nuzlocke_server\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

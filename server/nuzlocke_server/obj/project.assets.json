@@ -1390,11 +1390,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Code\\League-of-Legends-Nuzlocke\\server\\nuzlocke_server\\nuzlocke_server.csproj",
+      "projectUniqueName": "A:\\Code\\leaguenuz\\server\\nuzlocke_server\\nuzlocke_server.csproj",
       "projectName": "nuzlocke_server",
-      "projectPath": "A:\\Code\\League-of-Legends-Nuzlocke\\server\\nuzlocke_server\\nuzlocke_server.csproj",
+      "projectPath": "A:\\Code\\leaguenuz\\server\\nuzlocke_server\\nuzlocke_server.csproj",
       "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-      "outputPath": "A:\\Code\\League-of-Legends-Nuzlocke\\server\\nuzlocke_server\\obj\\",
+      "outputPath": "A:\\Code\\leaguenuz\\server\\nuzlocke_server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Marcus\\AppData\\Roaming\\NuGet\\NuGet.Config",
